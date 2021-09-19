@@ -1,0 +1,34 @@
+body
+{
+	font-family: 'Montserrat', sans-serif;
+}
+.main-container
+{
+	float: left;
+    width: 100%;
+    height: auto;
+}
+.navigation
+{
+	float: left;
+	width: 100%;
+    height: auto;
+    border-bottom: 1px solid gray;
+}
+.navigation ul{
+    margin-left: auto;
+}
+.navigation ul li a{
+    color: gray;
+}
+.navbar-toggler
+{
+	border:1px solid grey;
+}
+.navbar-toggler span
+{
+	color:grey;
+}
+.navigation #navbardrop{
+    width: 4%;
+}

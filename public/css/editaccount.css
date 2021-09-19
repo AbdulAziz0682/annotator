@@ -1,0 +1,930 @@
+body
+{
+	font-family:  sans-serif;
+}
+.main-container
+{
+	float: left;
+    width: 100%;
+    height: auto;
+}
+.main-column{
+    width: 100%;
+    height: auto;
+}
+.side-column{
+    width: 100%;
+    height: 600px;
+    border: 1px solid grey;
+    margin-top: -1px;
+    border-left: none;
+}
+.side-column ul{
+    margin-left: 4%;
+    margin-top: 10%;
+    line-height: 40px;
+}
+.side-column ul li a{
+    color: black;
+}
+.side-column #icon{
+   color: black;
+}
+.center-column{
+    width: 100%;
+    height: 600px;
+    border: 1px solid grey;
+    margin-top: -1px;
+    margin-left: -1%;
+    border-left: none;
+    border-right: none;
+}
+.account-div{
+    width: 100%;
+    height: 500px;
+    border:1px solid black;
+    margin-top: 50px;
+    border-radius: 50px;
+}
+.account-div h6{
+    margin-top: 50px;
+    margin-left: 50px;
+    font-size: 30px;
+}
+.account-div .btn7{
+    position: absolute;
+    left: 65%;
+    top: 60px;
+    width: 10%;
+    height: 30px;
+    background-color: gainsboro;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.account-div .btn8{
+    position: absolute;
+    left: 78%;
+    top: 60px;
+    width: 10%;
+    height: 30px;
+    background-color: darkslategray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.detail7{
+    width: 80%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-top: none;
+    border-left: none;
+}
+.detail7 h5{
+   position: absolute;
+   top: 70px;
+}
+.detail8{
+    width: 90%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: -33px;
+    margin-top: 50px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    
+}
+.detail8 input{
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    border: none;
+    background-color: gainsboro;
+    width: 30%;
+ }
+.detail9{
+    width: 80%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: 50px;
+    border-top: none;
+    border-left: none;
+}
+.detail9 h5{
+    position: absolute;
+    top: 30px;
+ }
+.detail10{
+    width: 90%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: -33px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+.detail10 input{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    border: none;
+    background-color: gainsboro;
+    width: 30%;
+ }
+ .detail10 #input3{
+    position: absolute;
+    top: 20px;
+    left: 260px;
+    border: none;
+    background-color: gainsboro;
+    width: 30%;
+ }
+.detail11{
+    width: 80%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: 50px;
+    border-top: none;
+    border-left: none;
+}
+.detail11 h5{
+    position: absolute;
+    top: 30px;
+ }
+.detail12{
+    width: 90%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: -33px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+.detail12 input{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    border: none;
+    background-color: gainsboro;
+    width: 30%;
+    color: black;
+ }
+.detail13{
+    width: 80%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: 50px;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+.detail14{
+    width: 90%;
+    border: 1px solid black;
+    height: 70px;
+    margin-left: -33px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+@media (max-width: 1400px){
+    
+    
+}
+@media (max-width: 1200px){
+    
+}
+@media (max-width: 1199px){
+    
+  
+}
+@media (max-width: 1050px){
+   
+    .side-column ul{
+        margin-left: 6%;
+        margin-top: 10%;
+        line-height: 40px;
+    }
+    .detail10 #input3{
+        position: absolute;
+        top: 20px;
+        left: 200px;
+        border: none;
+        background-color: gainsboro;
+        width: 30%;
+     }
+   
+}
+@media (max-width: 991px){
+    .detail8 input{
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        border: none;
+        background-color: gainsboro;
+        width: 33%;
+     }
+    .detail10 #input3{
+        position: absolute;
+        top: 20px;
+        left: 160px;
+        border: none;
+        background-color: gainsboro;
+        width: 37%;
+     }
+     .detail12 input{
+        position: absolute;
+        top: 30px;
+        left: 20px;
+        border: none;
+        background-color: gainsboro;
+        width: 33%;
+        color: black;
+     }
+}
+@media (max-width: 915px){
+    .account-div h6{
+        margin-top: 50px;
+        margin-left: 50px;
+        font-size: 25px;
+    }
+    .account-div .btn7{
+        position: absolute;
+        left: 63%;
+        top: 60px;
+        width: 10%;
+        height: 30px;
+        background-color: gainsboro;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .account-div .btn8{
+        position: absolute;
+        left: 75%;
+        top: 60px;
+        width: 10%;
+        height: 30px;
+        background-color: darkslategray;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .detail7{
+        width: 80%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        margin-top: 50px;
+        border-top: none;
+        border-left: none;
+    }
+    .detail7 h5{
+       position: absolute;
+       top: 70px;
+       font-size: 19px;
+    }
+    .detail8{
+        width: 90%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: -33px;
+        margin-top: 50px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        
+    }
+    .detail8 input{
+        position: absolute;
+        top: 70px;
+        left: 20px;
+        border: none;
+        background-color: gainsboro;
+        width: 37%;
+     }
+    .detail9{
+        width: 80%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        border-top: none;
+        border-left: none;
+    }
+    .detail9 h5{
+        position: absolute;
+        top: 30px;
+        font-size: 19px;
+     }
+    .detail10{
+        width: 90%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: -33px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail10 input{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        border: none;
+        background-color: gainsboro;
+        width: 33%;
+     }
+     .detail10 #input3{
+        position: absolute;
+        top: 20px;
+        left: 150px;
+        border: none;
+        background-color: gainsboro;
+        width: 39%;
+     }
+    .detail11{
+        width: 80%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        border-top: none;
+        border-left: none;
+    }
+    .detail11 h5{
+        position: absolute;
+        top: 30px;
+        font-size: 18px;
+     }
+    .detail12{
+        width: 90%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: -33px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail12 input{
+        position: absolute;
+        top: 25px;
+        left: 20px;
+        border: none;
+        background-color: gainsboro;
+        width: 36%;
+        color: black;
+     }
+    .detail13{
+        width: 80%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+    }
+    .detail14{
+        width: 90%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: -33px;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+}
+@media (max-width: 767px){
+   
+    .side-column{
+        width: 100%;
+        height: 350px;
+        border: 1px solid grey;
+        margin-top: -1px;
+        border-left: none;
+    }
+    .side-column ul{
+        margin-left: 1%;
+        margin-top: 10%;
+        line-height: 40px;
+    }
+    .center-column{
+        width: 100%;
+        height: 600px;
+        border: 1px solid grey;
+        margin-top: -1px;
+        margin-left: 0%;
+        border-left: none;
+    }
+    .detail7{
+        width: 22%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        margin-top: 30px;
+        border-top: none;
+        border-left: none;
+    }
+    .detail7 h5{
+        position: absolute;
+        top: 50px;
+     }
+    .detail8{
+        width: 58%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 205px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none; 
+    }
+    .detail8 input{
+        position: absolute;
+        top: -50px;
+        left: 240px;
+        border: none;
+        background-color: gainsboro;
+        width: 25%;
+     }
+     .detail9{
+        width: 22%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        border-top: none;
+        border-left: none;
+    }
+    .detail9 h5{
+        position: absolute;
+        top: 30px;
+     }
+    .detail10{
+        width: 58%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 205px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail10 input{
+        position: absolute;
+        top: -50px;
+        left: 240px;
+        border: none;
+        background-color: gainsboro;
+        width: 20%;
+     }
+     .detail10 #input3{
+        position: absolute;
+        top: -50px;
+        left: 420px;
+        border: none;
+        background-color: gainsboro;
+        width: 21%;
+     }
+     .detail11{
+        width: 22%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        border-top: none;
+        border-left: none;
+    }
+    .detail11 h5{
+        position: absolute;
+        top: 30px;
+     }
+    .detail12{
+        width: 58%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 205px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail12 input{
+        position: absolute;
+        top: -50px;
+        left: 250px;
+        width: 25%;
+     }
+    .detail13{
+        width: 22%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 50px;
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+    }
+    .detail6{
+        width: 90%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: -33px;
+        border-top: none;
+        border-right: none;
+        border-bottom: none;
+        border-left: none;
+    }
+    
+}
+@media (max-width: 663px){
+    .detail8{
+        width: 58%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 180px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none; 
+    }
+     .detail8 input{
+        position: absolute;
+        top: -50px;
+        left: 220px;
+        width: 28%;
+     }
+     .detail10{
+        width: 58%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 180px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail10 input{
+        position: absolute;
+        top: -50px;
+        left: 220px;
+     }
+     .detail10 #input3{
+        position: absolute;
+        top: -50px;
+        left: 380px;
+        width: 24%;
+     }
+     .detail12{
+        width: 58%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 180px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail12 input{
+        position: absolute;
+        top: -50px;
+        left: 220px;
+     }
+    
+}
+@media (max-width: 575px){
+    .account-div h6{
+        margin-top: 60px;
+        margin-left: 50px;
+        font-size: 22px;
+    }
+    .detail7 h5{
+        position: absolute;
+        top: 53px;
+        font-size: 16px;
+     }
+     .detail9 h5{
+        position: absolute;
+        top: 30px;
+        font-size: 16px;
+     }
+     .detail11 h5{
+        position: absolute;
+        top: 30px;
+        font-size: 16px;
+     }
+    
+    .account-div .btn5{
+        position: absolute;
+        left: 60%;
+        top: 60px;
+        width: 13%;
+        height: 25px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .account-div .btn6{
+        position: absolute;
+        left: 75%;
+        top: 60px;
+        width: 13%;
+        height: 25px;
+        background-color: darkslategray;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .detail8{
+        width: 55%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 163px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none; 
+    }
+     .detail8 input{
+        position: absolute;
+        top: -50px;
+        left: 200px;
+        font-size: 14px;
+     }
+     .detail10{
+        width: 55%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 163px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail10 input{
+        position: absolute;
+        top: -50px;
+        left: 200px;
+        font-size: 14px;
+        width: 22%;
+     }
+     .detail10 #input3{
+        position: absolute;
+        top: -50px;
+        left: 320px;
+        font-size: 14px;
+        width: 25%;
+     }
+     .detail12{
+        width: 55%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 163px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail12 input{
+        position: absolute;
+        top: -50px;
+        left: 200px;
+        font-size: 14px;
+     } 
+    
+}
+@media (max-width: 480px){
+    .account-div h4{
+        margin-top: 60px;
+        margin-left: 50px;
+        font-size: 15px;
+    }
+    .account-div .btn5{
+        position: absolute;
+        left: 55%;
+        top: 60px;
+        width: 14%;
+        height: 20px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+    .account-div .btn6{
+        position: absolute;
+        left: 71%;
+        top: 60px;
+        width: 14%;
+        height: 20px;
+        background-color: darkslategray;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+    .detail h5{
+        position: absolute;
+        top: 53px;
+        font-size: 13px;
+     }
+     .detail1 h5{
+        position: absolute;
+        top: 30px;
+        font-size: 13px;
+     }
+     .detail3 h5{
+        position: absolute;
+        top: 30px;
+        font-size: 13px;
+     }
+    .details{
+        width: 55%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 140px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none; 
+    }
+     .details h5{
+        position: absolute;
+        top: -50px;
+        left: 180px;
+        font-size: 13px;
+     }
+     .detail2{
+        width: 55%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 140px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail2 h5{
+        position: absolute;
+        top: -50px;
+        left: 180px;
+        font-size: 15px;
+     }
+     .detail4{
+        width: 55%;
+        border: 1px solid black;
+        height: 70px;
+        margin-left: 140px;
+        margin-top: -70px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+    }
+    .detail4 h5{
+        position: absolute;
+        top: -40px;
+        left: 180px;
+        font-size: 13px;
+     } 
+   
+}
+@media (max-width: 460px){
+    
+
+}
+
+
+@media (max-width: 1400px){
+    
+    
+}
+@media (max-width: 1200px){
+    
+}
+@media (max-width: 1199px){
+    
+  
+}
+@media (max-width: 1050px){
+   
+    .side-column ul{
+        margin-left: 6%;
+        margin-top: 10%;
+        line-height: 40px;
+    }
+    
+   
+}
+@media (max-width: 991px){
+    
+}
+@media (max-width: 915px){
+    .center-column .btn4{
+        position: absolute;
+        left: 71%;
+        top: 100px;
+        width: 25%;
+        height: 40px;
+        background-color: #D7BDE2 ;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+   
+}
+@media (max-width: 767px){
+   
+    .side-column{
+        width: 100%;
+        height: 350px;
+        border: 1px solid grey;
+        margin-top: -1px;
+        border-left: none;
+    }
+    .side-column ul{
+        margin-left: 1%;
+        margin-top: 10%;
+        line-height: 40px;
+    }
+    .center-column{
+        width: 100%;
+        height: 600px;
+        border: 1px solid grey;
+        margin-top: -1px;
+        margin-left: 0%;
+        border-left: none;
+    }
+    .center-column h2{
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    .center-column .btn4{
+        position: absolute;
+        left: 71%;
+        top: 90px;
+        width: 25%;
+        height: 40px;
+        background-color: #D7BDE2 ;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+    .center-column .table{
+        margin-top: 5%;
+    }
+    
+}
+@media (max-width: 663px){
+    
+    
+}
+@media (max-width: 575px){
+    .center-column h2{
+        margin-top: 50px;
+        font-size: 23px;
+    }
+    .center-column .btn4{
+        position: absolute;
+        left: 71%;
+        top: 80px;
+        width: 25%;
+        height: 40px;
+        background-color: #D7BDE2 ;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+    
+}
+@media (max-width: 480px){
+    .center-column h2{
+        margin-top: 50px;
+        font-size: 20px;
+    }
+    .center-column .btn4{
+        position: absolute;
+        left: 71%;
+        top: 90px;
+        width: 25%;
+        height: 40px;
+        background-color: #D7BDE2 ;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .center-column .table{
+        margin-top: 10%;
+        font-size: 13px;
+    }
+   
+}
+@media (max-width: 460px){
+    
+    .center-column .table{
+        margin-top: 10%;
+        font-size: 12px;
+    }
+
+}
