@@ -1,38 +1,47 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Account from "./components/Account";
-import AddPlanner from "./components/AddPlanner";
-import EditAccount from "./components/EditAccount";
-import Grader from "./components/Grader";
-import GraderCategory from "./components/GraderCategory";
-import JobCategory from "./components/JobCategory";
-import Jobs from "./components/Jobs";
-import Navbar from "./components/Navbar";
-import Planner from "./components/Planner";
+import React from 'react';
+import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+import Routes from './routes';
 
+import { Provider } from 'react-redux';
+import store from './redux/store';
 
-function App() {
+import { createGenerateClassName, jssPreset, StylesProvider } from '@material-ui/core/styles';
+import {create} from 'jss';
+import jssExtend from 'jss-plugin-extend';
+import rtl from 'jss-rtl';
 
-const [openPlanner, setOpenPlanner] = useState(false);
+import './index.css';
+import ErrorBoundary from './components/ErrorBoundary';
 
-  return (
-    <div>
-      <Router>
-      <Navbar />
-      {openPlanner && <AddPlanner setOpenPlanner={() => setOpenPlanner(false)}/>}
-      <Switch>
-        <Route exact path = "/" component={Jobs}/>
-        <Route path = "/grader" component={Grader}/>
-        <Route path = "/jobcategory" component={JobCategory}/>
-        <Route path = "/gradercategory" component={GraderCategory}/>
-        <Route path = "/planner" component={Planner}/>
-        <Route path = "/account" component={Account}/>
-        <Route path = "/edit" component={EditAccount}/>
-       
-      </Switch>
-      </Router>
-    </div>
-  );
+const customTheme = createTheme({
+	palette: {
+		type: 'light',
+		primary: {
+			main: '#1f2b36d9',
+		},
+		secondary: {
+			main: '#E94646',
+			light: '#f1f1f1',
+		},
+	}
+})
+
+const jss = create({
+	...jssPreset(),
+	plugins: [...jssPreset().plugins, jssExtend(), rtl()],
+	insertionPoint: document.getElementById('jss-insertion-point')
+});
+
+export default function App(){
+	return (
+		<ErrorBoundary>
+		<Provider store={store}>
+			<StylesProvider jss={jss} generateClassName={createGenerateClassName()}>
+				<ThemeProvider theme={customTheme}>
+					<Routes />
+				</ThemeProvider>
+			</StylesProvider>
+		</Provider>
+		</ErrorBoundary>
+	)
 }
-
-export default App;
