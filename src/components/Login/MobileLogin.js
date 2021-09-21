@@ -17,7 +17,7 @@ export default function MobileLogin({formik}){
                 <img src={logo} alt="logo" style={{width: 100}}/>
                 <Typography variant="h4" color="primary" style={{fontFamily: "'Montserrat', sans-serif"}}>annotator</Typography>
             </Grid>
-            <Grid container alignItems="center" direction="column" className="mt-24 mb-16">
+            <Grid container alignItems="center" direction="column" className="mt-24 mb-16" spacing={2}>
                 <Grid item className="w-80">
                     <TextField
                         fullWidth
