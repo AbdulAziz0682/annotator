@@ -9,7 +9,9 @@ import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem } from "@materi
 import { MoreVert } from "@material-ui/icons";
 
 import { useDispatch } from "react-redux";
+
 import { logout } from "../redux/actions/accountActions";
+import { setCurrentTab } from "../redux/actions/graderActions";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -41,6 +43,10 @@ export default function TopBar(props){
     function handleMenuClose(){
         setAnchor(null);
     }
+    function handleAccountClick(){
+        dispatch(setCurrentTab('account'));
+        handleMenuClose();
+    }
     return (
         <div className={classes.root}>
             <AppBar position="fixed" color="white" className={classes.appBarZIndex + ' border-gray border-b shadow-none'}>
@@ -59,7 +65,7 @@ export default function TopBar(props){
                         transformOrigin={{ vertical: 'top', horizontal: 'right' }}
                         onClose={handleMenuClose}
                     >
-                        <MenuItem key="2" component={Link} to="/account" onClick={handleMenuClose}>Account</MenuItem>
+                        <MenuItem key="2" onClick={handleAccountClick}>Account</MenuItem>
                         <MenuItem key="3" component={Link} to="/login" onClick={(e)=>{dispatch(logout()); handleMenuClose(e)}}>Logout</MenuItem>
                     </Menu>
                 </Toolbar>
