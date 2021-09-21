@@ -7,6 +7,7 @@ import * as yup from 'yup';
 import { useSelector } from 'react-redux';
 
 import { Redirect } from 'react-router';
+
 import DesktopRegister from './DesktopRegister';
 import MobileRegister from './MobileRegister';
 
@@ -51,14 +52,14 @@ export default function Register(props){
         return <Redirect push to="/home" />
     }
     return (
-        <Grid item container>
-            <form onSubmit={formik.handleSubmit} className="w-full flex items-center justify-center">
-            <Hidden smDown>
-                <DesktopRegister formik={formik} />
-            </Hidden>
-            <Hidden mdUp>
-                <MobileRegister formik={formik} />
-            </Hidden>
+        <Grid item className="w-full h-full">
+            <form onSubmit={formik.handleSubmit} className={`w-full h-full flex items-start justify-start lg:items-center lg:justify-center`}>
+                <Hidden smDown>
+                    <DesktopRegister formik={formik} />
+                </Hidden>
+                <Hidden mdUp>
+                    <MobileRegister formik={formik} />
+                </Hidden>
             </form>
         </Grid>
     )

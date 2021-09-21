@@ -1,4 +1,4 @@
-import { Button, FormHelperText, Grid, InputLabel, Typography, InputAdornment, Paper, makeStyles, Input } from '@material-ui/core';
+import { Button, Grid, Typography, InputAdornment} from '@material-ui/core';
 import { TextField } from '@material-ui/core';
 
 import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined';
@@ -11,11 +11,11 @@ import confirm from '../../assets/confirm.svg';
 
 import { Link } from 'react-router-dom';
 
-const inputIconSize = 20;
+const inputIconSize = 16;
 
 export default function MobileRegister({formik}){
     return (
-        <Grid container alignItems="center" direction="column">
+        <Grid container alignItems="center" direction="column" className="justify-self-start">
             <Grid item className="w-80 flex items-center p-6">
                 <img src={logo} alt="logo" style={{width: 100}}/>
                 <Typography variant="h4" color="primary" style={{fontFamily: "'Montserrat', sans-serif"}}>annotator</Typography>
@@ -145,11 +145,11 @@ export default function MobileRegister({formik}){
                     />
                 </Grid>
             </Grid>
-            <Grid item xs={5} className="flex flex-col items-center">
-                <Button variant="contained" color="primary" type="submit" fullWidth className="p-2 text-lg">Sign up</Button>
+            <Grid item xs={7} className="flex flex-col items-center">
+                <Button variant="contained" color="primary" type="submit" fullWidth className="px-2 text-2xl">Sign up</Button>
                 <div className="w-80 flex justify-center items-center text-xs mt-2">
                     <span>Already have an account?</span>
-                    <Link to="/login" className="font-bold mx-1">LOGIN</Link>
+                    <Link to="/login" className="font-bold mx-1">LOGIN HERE</Link>
                 </div>
             </Grid>
         </Grid>

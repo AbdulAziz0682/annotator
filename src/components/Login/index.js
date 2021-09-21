@@ -48,7 +48,7 @@ export default function Login(props){
     }
     return (
         <Grid container item>
-            <form onSubmit={formik.handleSubmit} className="w-full flex items-center justify-center">
+            <form onSubmit={formik.handleSubmit} className="w-full flex items-start justify-start lg:items-center lg:justify-center">
                 <Hidden smDown>
                     <DesktopLogin formik={formik} />
                 </Hidden>

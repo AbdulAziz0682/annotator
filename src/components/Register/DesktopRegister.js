@@ -6,6 +6,7 @@ import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined'
 import logo from '../../assets/afluence.png';
 import registerBackground from '../../assets/registerBackground.png';
 import account from '../../assets/account.png';
+import smartPhone from '../../assets/smartphone.svg';
 import key from '../../assets/key.svg';
 import confirm from '../../assets/confirm.svg';
 
@@ -15,7 +16,7 @@ const inputIconSize = 20;
 
 export default function DesktopRegister({formik}){
     return (
-        <Grid container component={Paper} elevation={6} id="md" direction="row" className="border md:w-5/6 lg:w-204 self-center rounded-3xl">
+        <Grid container component={Paper} elevation={6} id="md" direction="row" className="border md:w-5/6 lg:w-180 rounded-3xl">
             <Grid item xs={6} className="flex flex-col justify-center items-center p-5 bg-gray-100 rounded-l-3xl">
                 <div className="flex flex-row items-center mt-9">
                     <img src={logo} alt="afluence logo" style={{width: 70}}/>
@@ -31,19 +32,19 @@ export default function DesktopRegister({formik}){
                         <hr className="border-b border-black w-10/12 my-1" />
                         <hr className="border-b border-black w-9/12" />
                     </Grid>
-                    <Grid container alignItems="center" direction="column" className="my-6">
+                    <Grid container alignItems="center" direction="column" className="my-6" spacing={2}>
                         <Grid item className="w-full my-1">
                             <TextField
                                 fullWidth
                                 id="email"
                                 name="email"
                                 variant="standard"
-                                label="Email"
+                                placeholder="Email"
                                 size="small"
                                 InputProps={{
                                     startAdornment:(
                                         <InputAdornment postition="start">
-                                            <img src={account} style={{maxWidth: inputIconSize, minHeight: inputIconSize}} alt="account icon" />
+                                            <img className="mr-1" src={account} style={{maxWidth: inputIconSize, minHeight: inputIconSize}} alt="account icon" />
                                         </InputAdornment>
                                     ),
                                     endAdornment:(
@@ -62,16 +63,44 @@ export default function DesktopRegister({formik}){
                         <Grid item className="w-full my-1">
                             <TextField
                                 fullWidth
-                                type="password"
-                                id="password"
-                                name="password"
+                                type="number"
+                                id="phone"
+                                name="phone"
                                 variant="standard"
-                                label="Password"
+                                placeholder="Phone"
                                 size="small"
                                 InputProps={{
                                     startAdornment:(
                                         <InputAdornment postition="start">
-                                            <img src={key} style={{maxWidth: inputIconSize, minHeight: inputIconSize}} alt="password key" />
+                                            <img style={{maxWidth: inputIconSize+5, minHeight: inputIconSize+5}} src={smartPhone} alt="smartPhone icon" />
+                                        </InputAdornment>
+                                    ),
+                                    endAdornment:(
+                                        (formik.touched.phone && Boolean(formik.errors.phone)) &&
+                                        <InputAdornment position="end">
+                                            <ReportProblemOutlinedIcon color="secondary" className="w-5" />
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                value={formik.values.phone}
+                                onChange={formik.handleChange}
+                                error={formik.touched.phone && Boolean(formik.errors.phone)}
+                                helperText={formik.touched.phone && formik.errors.phone}
+                            />
+                        </Grid>
+                        <Grid item className="w-full my-1">
+                            <TextField
+                                fullWidth
+                                type="password"
+                                id="password"
+                                name="password"
+                                variant="standard"
+                                placeholder="Password"
+                                size="small"
+                                InputProps={{
+                                    startAdornment:(
+                                        <InputAdornment postition="start">
+                                            <img className="mr-1" src={key} style={{maxWidth: inputIconSize, minHeight: inputIconSize}} alt="password key" />
                                         </InputAdornment>
                                     ),
                                     endAdornment:(
@@ -94,12 +123,12 @@ export default function DesktopRegister({formik}){
                                 id="confirmPassword"
                                 name="confirmPassword"
                                 variant="standard"
-                                label="Confirm Password"
+                                placeholder="Confirm Password"
                                 size="small"
                                 InputProps={{
                                     startAdornment:(
                                         <InputAdornment postition="start">
-                                            <img src={confirm} style={{maxWidth: inputIconSize, minHeight: inputIconSize}} alt="confirmPassword key" />
+                                            <img className="mr-1" src={confirm} style={{maxWidth: inputIconSize, minHeight: inputIconSize}} alt="confirmPassword key" />
                                         </InputAdornment>
                                     ),
                                     endAdornment:(

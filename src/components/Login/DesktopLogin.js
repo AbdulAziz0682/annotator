@@ -30,7 +30,7 @@ export default function DesktopLogin({formik}){
                         <hr className="border-b border-black w-10/12 my-1" />
                         <hr className="border-b border-black w-9/12" />
                     </Grid>
-                    <Grid container alignItems="center" direction="column" className="my-24">
+                    <Grid container alignItems="center" direction="column" className="mt-20 mb-12">
                         <Grid item className="w-full my-2">
                             <TextField
                                 fullWidth
@@ -88,7 +88,7 @@ export default function DesktopLogin({formik}){
                         </Grid>
                     </Grid>
                     <Grid item xs={8} className="flex flex-col items-center">
-                        <Button variant="contained" color="primary" type="submit" fullWidth>Login</Button>
+                        <Button variant="contained" color="primary" type="submit" fullWidth>Log in</Button>
                         <div className="w-80 flex justify-center items-center text-xs mt-2">
                             <span>Don't have an account?</span>
                             <Link to="/register" className="font-bold uppercase mx-1">Sign up</Link>

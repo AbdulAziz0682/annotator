@@ -9,8 +9,10 @@ import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined'
 import logo from '../../assets/afluence.png';
 import account from '../../assets/account.png';
 import key from '../../assets/key.svg';
-export default function MobileLogin({formik}){
 
+const inputIconSize = 16;
+
+export default function MobileLogin({formik}){
     return (
         <Grid container alignItems="center" direction="column">
             <Grid item className="w-80 flex items-center p-6">
@@ -30,7 +32,7 @@ export default function MobileLogin({formik}){
                         InputProps={{
                             startAdornment:(
                                 <InputAdornment postition="start">
-                                    <img src={account} alt="account icon" />
+                                    <img style={{maxWidth: inputIconSize, minHeight: inputIconSize}} src={account} alt="account icon" />
                                 </InputAdornment>
                             ),
                             endAdornment:(
@@ -61,7 +63,7 @@ export default function MobileLogin({formik}){
                         InputProps={{
                             startAdornment:(
                                 <InputAdornment postition="start">
-                                    <img src={key} alt="password key" />
+                                    <img style={{maxWidth: inputIconSize, minHeight: inputIconSize}} src={key} alt="password key" />
                                 </InputAdornment>
                             ),
                             endAdornment:(
@@ -80,8 +82,8 @@ export default function MobileLogin({formik}){
                     />
                 </Grid>
             </Grid>
-            <Grid item xs={5} className="flex flex-col items-center">
-                <Button variant="contained" color="primary" type="submit" fullWidth className="p-2 text-lg">Log in</Button>
+            <Grid item xs={7} className="flex flex-col items-center">
+                <Button variant="contained" color="primary" type="submit" fullWidth className="px-2 text-2xl">Log in</Button>
                 <div className="w-80 flex justify-center items-center text-xs mt-2">
                     <span>Don't have an account?</span>
                     <Link to="/register" className="font-bold uppercase mx-1">Sign up here</Link>
