@@ -8,8 +8,7 @@ import { useSelector } from 'react-redux';
 import TopBar from '../components/TopBar';
 import Home from './Home';
 import Register from './Regiser';
-import Account from './Account';
-import Projects from './Projects';
+import Grader from '../components/Grader/index';
 import Login from './Login';
 import Test from './Test';
 
@@ -21,12 +20,11 @@ export default function Routes({children}){
                 <Grid item>
                     {loggedIn && <TopBar />}
                 </Grid>
-                <Grid container item style={{height: `calc(100vh - ${loggedIn ? '57px' : '0vh'})`}}>
+                <Grid container item style={{height: `calc(100vh - ${loggedIn ? '57px' : '0vh'})`, backgroundColor: 'white'}}>
                     <Switch>
                         <Route exact path="/login"><Login /></Route>
-                        <Route exact path="/projects"><Projects /></Route>
-                        <Route exact path="/account"><Account /></Route>
                         <Route exact path="/register"><Register /></Route>
+                        <Route exact path="/grader"><Grader /></Route>
                         <Route exact path="/test"><Test /></Route>
                         <Route exact path="/home"><Home /></Route>
                         <Route exact path="/"><Login /></Route>

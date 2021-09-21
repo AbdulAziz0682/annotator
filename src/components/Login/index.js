@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
 import { Redirect } from 'react-router';
+import { useHistory } from 'react-router';
 import { login } from '../../redux/actions/accountActions';
 
 import dummyUser from './dummyUser';
@@ -17,6 +18,7 @@ import MobileLogin from './MobileLogin';
 
 export default function Login(props){
     let loggedIn = useSelector((state)=>state.account.loggedIn);
+    const history = useHistory();
     let dispatch = useDispatch();
     //Form requirements
     const validationSchema = yup.object({
@@ -37,8 +39,8 @@ export default function Login(props){
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            
             dispatch(login(dummyUser));
+            history.push('/grader');
             console.log(JSON.stringify(values, null, 2));
         },
     });
