@@ -1,10 +1,10 @@
 import { combineReducers } from "redux";
 import account from './account';
-import currentProject from './currentProject';
+import grader from './grader';
 
 const reducers = combineReducers({
     account,
-    currentProject
+    grader
 });
 
 export default reducers;
