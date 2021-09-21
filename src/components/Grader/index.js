@@ -9,7 +9,7 @@ import { Redirect } from 'react-router';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
-		flexGrow: 1,
+		flexGrow: 1
 	},
 }));
 

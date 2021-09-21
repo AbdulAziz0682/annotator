@@ -46,24 +46,8 @@ const useStyles = makeStyles((theme) => ({
 	  duration: theme.transitions.duration.leavingScreen,
 	}),
 	overflowX: 'hidden',
-	width: theme.spacing(7) + 1,
-	[theme.breakpoints.up('sm')]: {
-	  width: theme.spacing(9) + 1,
-	},
-  },
-  toolbar: {
-	display: 'flex',
-	alignItems: 'center',
-	justifyContent: 'flex-end',
-	padding: theme.spacing(0, 1),
-	// necessary for content to be below app bar
-	...theme.mixins.toolbar,
-	marginTop: theme.mixins.toolbar.minHeight+1,
-  },
-  listContent: {
-	flexGrow: 1,
-	marginTop: theme.spacing(3),
-  },
+	width: theme.spacing(9) + 1
+  }
 }));
 
 export default function SideBar() {
@@ -89,17 +73,23 @@ export default function SideBar() {
 			}}
 		>
 			<List className={classes.content}>
-				<ListItem button key="1" style={{backgroundColor: currentTab === 'otherVoices' ? activeColor : ''}} onClick={()=>dispatch(setCurrentTab('otherVoices'))} >
-					<ListItemIcon><img src={otherVoicesIcon} alt="other voices" className="w-6" /></ListItemIcon>
-					<ListItemText primary="Other Voices" />
+				<ListItem button key="otherVoices" onClick={()=>dispatch(setCurrentTab('otherVoices'))} >
+					<div className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'otherVoices' ? activeColor : ''}} >
+						<ListItemIcon><img src={otherVoicesIcon} alt="other voices" className="w-6" /></ListItemIcon>
+						<ListItemText primary="Other Voices" />
+					</div>
 				</ListItem>
-				<ListItem button key="myVoice" style={{backgroundColor: currentTab === 'myVoice' ? activeColor : ''}} onClick={()=>dispatch(setCurrentTab('myVoice'))}>
-					<ListItemIcon><img src={accountIcon} alt="my Voice" className="w-6" /></ListItemIcon>
-					<ListItemText primary="My Voice" />
+				<ListItem button key="myVoice" onClick={()=>dispatch(setCurrentTab('myVoice'))}>
+					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'myVoice' ? activeColor : ''}} >
+						<ListItemIcon><img src={accountIcon} alt="my Voice" className="w-5 h-6" /></ListItemIcon>
+						<ListItemText primary="My Voice" />
+					</div>
 				</ListItem>
-				<ListItem button key="metrics" style={{backgroundColor: currentTab === 'metrics' ? activeColor : ''}} onClick={()=>dispatch(setCurrentTab('metrics'))}>
-					<ListItemIcon><img src={metricsIcon} alt="metrics" className="w-6" /></ListItemIcon>
-					<ListItemText primary="Metrics" />
+				<ListItem button key="metrics" onClick={()=>dispatch(setCurrentTab('metrics'))}>
+					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'metrics' ? activeColor : ''}} >
+						<ListItemIcon><img src={metricsIcon} alt="metrics" className="w-6" /></ListItemIcon>
+						<ListItemText primary="Metrics" />
+					</div>
 				</ListItem>
 			</List>
 			<div className="flex-grow"></div>
