@@ -21,7 +21,7 @@ export default function Routes({children}){
                 <Grid item>
                     {loggedIn && <TopBar />}
                 </Grid>
-                <Grid container item style={{height: 'calc(100vh - 64px)'}} alignItems="center" justifyContent="center">
+                <Grid container item>
                     <Switch>
                         <Route exact path="/login"><Login /></Route>
                         <Route exact path="/projects"><Projects /></Route>
