@@ -8,11 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem } from "@material-ui/core";
 import { MoreVert } from "@material-ui/icons";
 
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { logout } from "../redux/actions/accountActions";
-
-import { useHistory } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -37,8 +34,6 @@ const useStyles = makeStyles((theme) => ({
 export default function TopBar(props){
     const classes = useStyles();
     let dispatch = useDispatch();
-    let history = useHistory();
-    let loggedIn = useSelector(state => state.account.loggedIn);
     let [anchor, setAnchor] = useState(null);
     function handleMenuClick(event){
         setAnchor(event.currentTarget);
@@ -48,7 +43,7 @@ export default function TopBar(props){
     }
     return (
         <div className={classes.root}>
-            <AppBar position="fixed" color="white" className={classes.appBarZIndex, 'border-gray border-b shadow-none'}>
+            <AppBar position="fixed" color="white" className={classes.appBarZIndex + ' border-gray border-b shadow-none'}>
                 <Toolbar className="items-center">
                     <IconButton edge="start" className={classes.logo} color="inherit" aria-label="menu">
                         <img src={logo} alt="afluence logo"/>

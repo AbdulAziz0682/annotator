@@ -1,8 +1,6 @@
 import clsx from "clsx";
 import { makeStyles } from '@material-ui/core/styles';
 
-import { useSelector } from "react-redux";
-
 const useStyles = makeStyles(theme => ({
     root: {
         padding: theme.spacing(1),
