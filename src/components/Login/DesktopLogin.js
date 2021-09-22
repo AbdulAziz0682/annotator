@@ -11,7 +11,7 @@ import key from '../../assets/key.svg';
 
 import { Link } from 'react-router-dom';
 
-export default function DesktopLogin({formik}){
+export default function DesktopLogin({formik, isPlannerLogin}){
 
     return(
         <Grid container component={Paper} elevation={6} id="md" direction="row" className="border md:w-5/6 lg:w-156 self-center rounded-3xl mt-3">
@@ -89,7 +89,7 @@ export default function DesktopLogin({formik}){
                     </Grid>
                     <Grid item xs={8} className="flex flex-col items-center">
                         <Button variant="contained" color="primary" type="submit" fullWidth>Log in</Button>
-                        <div className="w-80 flex justify-center items-center text-xs mt-2">
+                        <div className={`w-80 flex justify-center items-center text-xs mt-2 ${isPlannerLogin ? 'hidden' : 'block'}`}>
                             <span>Don't have an account?</span>
                             <Link to="/register" className="font-bold uppercase mx-1">Sign up</Link>
                         </div>

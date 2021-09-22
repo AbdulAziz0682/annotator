@@ -10,6 +10,7 @@ import Home from './Home';
 import Register from './Regiser';
 import Grader from '../components/Grader/index';
 import Login from './Login';
+import PlannerLogin from '../components/Login/PlannerLogin';
 import Test from './Test';
 
 export default function Routes({children}){
@@ -28,6 +29,7 @@ export default function Routes({children}){
                         <Route exact path="/test"><Test /></Route>
                         <Route exact path="/home"><Home /></Route>
                         <Route exact path="/"><Login /></Route>
+                        <Route exact path="/plannerLogin"><PlannerLogin /></Route>
                     </Switch>
                 </Grid>
             </Grid>
