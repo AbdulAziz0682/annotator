@@ -32,6 +32,15 @@ export default function Content(props){
     return (
         <div className={classes.root}>
             {
+                currentTab === 'jobs' && <>Jobs</>
+            }
+            {
+                currentTab === 'graders' && <>Graders</>
+            }
+            {
+                currentTab === 'addPlanners' && <>Add Planners</>
+            }
+            {
                 currentTab === 'account' && <>
                     <Hidden smDown>
                         <DesktopAccount />

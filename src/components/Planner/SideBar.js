@@ -12,9 +12,9 @@ import ChevronIcon from '../ChevronIcon';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
-import accountIcon from '../../assets/account.png';
-import otherVoicesIcon from '../../assets/otherVoices.svg';
-import metricsIcon from '../../assets/metrics.svg';
+import jobsIcon from '../../assets/jobs.svg';
+import gradersIcon from '../../assets/graders.svg';
+import addPlannersIcon from '../../assets/addPlanners.svg';
 
 import { setCurrentTab, toggleDrawer } from '../../redux/actions/plannerActions';
 
@@ -73,22 +73,22 @@ export default function SideBar() {
 			}}
 		>
 			<List className={classes.content}>
-				<ListItem button key="otherVoices" onClick={()=>dispatch(setCurrentTab('otherVoices'))} >
-					<div className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'otherVoices' ? activeColor : ''}} >
-						<ListItemIcon><img src={otherVoicesIcon} alt="other voices" className="w-6" /></ListItemIcon>
-						<ListItemText primary="Other Voices" />
+				<ListItem button key="jobs" onClick={()=>dispatch(setCurrentTab('jobs'))} >
+					<div className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'jobs' ? activeColor : ''}} >
+						<ListItemIcon><img src={jobsIcon} alt="jobs" className="w-6" /></ListItemIcon>
+						<ListItemText primary="Jobs" />
 					</div>
 				</ListItem>
-				<ListItem button key="myVoice" onClick={()=>dispatch(setCurrentTab('myVoice'))}>
-					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'myVoice' ? activeColor : ''}} >
-						<ListItemIcon><img src={accountIcon} alt="my Voice" className="w-5 h-6" /></ListItemIcon>
-						<ListItemText primary="My Voice" />
+				<ListItem button key="graders" onClick={()=>dispatch(setCurrentTab('graders'))}>
+					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'graders' ? activeColor : ''}} >
+						<ListItemIcon><img src={gradersIcon} alt="Graders" className="w-5 h-6" /></ListItemIcon>
+						<ListItemText primary="Graders" />
 					</div>
 				</ListItem>
-				<ListItem button key="metrics" onClick={()=>dispatch(setCurrentTab('metrics'))}>
-					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'metrics' ? activeColor : ''}} >
-						<ListItemIcon><img src={metricsIcon} alt="metrics" className="w-6" /></ListItemIcon>
-						<ListItemText primary="Metrics" />
+				<ListItem button key="addPlanners" onClick={()=>dispatch(setCurrentTab('addPlanners'))}>
+					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'addPlanners' ? activeColor : ''}} >
+						<ListItemIcon><img src={addPlannersIcon} alt="add Planners" className="w-6" /></ListItemIcon>
+						<ListItemText primary="Add Planners" />
 					</div>
 				</ListItem>
 			</List>
