@@ -31,6 +31,13 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: 10,
       fontSize: 26
     },
+    paper: {
+        backgroundColor: 'white',
+        borderInline: '1px solid #d9dce2',
+        borderBlock: '1px solid #d9dce2',
+        borderRadius: '0.5rem',
+        fontFamily: "'Montserrat', sans-serif",
+    }
   }));
 
 export default function TopBar(props){
@@ -54,19 +61,28 @@ export default function TopBar(props){
                     <IconButton edge="start" className={classes.logo} color="primary" aria-label="menu">
                         <img src={logo} alt="afluence logo"/>
                     </IconButton>
-                    <Typography variant="h6" className={classes.title} style={{fontFamily: "'Montserrat', sans-serif"}}>{"Annotator" }</Typography>
+                    <Typography variant="h6" color="primary" className={classes.title} style={{fontFamily: "'Montserrat', sans-serif"}}>{"Annotator" }</Typography>
                     <img src={bell} alt="bell icon" style={{width: '16px'}} />
                     <IconButton onClick={handleMenuClick} color="primary">
                         <MoreVert />
                     </IconButton>                    
                     <Menu open={Boolean(anchor)} 
+                        elevation={0}
                         anchorEl={anchor}
-                        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-                        transformOrigin={{ vertical: 'top', horizontal: 'right' }}
+                        getContentAnchorEl={null}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'center',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'center',
+                        }}
                         onClose={handleMenuClose}
+                        classes={{paper: classes.paper}}
                     >
-                        <MenuItem key="2" onClick={handleAccountClick}>Account</MenuItem>
-                        <MenuItem key="3" component={Link} to="/login" onClick={(e)=>{dispatch(logout()); handleMenuClose(e)}}>Logout</MenuItem>
+                        <MenuItem key="2" onClick={handleAccountClick}><span style={{fontFamily: "'Montserrat', sans-serif"}} className="pr-24 pb-2 border-b border-gray-300">Account</span></MenuItem>
+                        <MenuItem key="3" component={Link} to="/login" onClick={(e)=>{dispatch(logout()); handleMenuClose(e)}}><span style={{fontFamily: "'Montserrat', sans-serif"}} className="pr-24">Logout</span></MenuItem>
                     </Menu>
                 </Toolbar>
             </AppBar>
