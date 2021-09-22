@@ -49,14 +49,14 @@ export default function TopBar(props){
     }
     return (
         <div className={classes.root}>
-            <AppBar position="fixed" color="white" className={classes.appBarZIndex + ' border-gray border-b shadow-none'}>
+            <AppBar position="fixed" className={classes.appBarZIndex + ' border-gray border-b shadow-none bg-current'}>
                 <Toolbar className="items-center">
-                    <IconButton edge="start" className={classes.logo} color="inherit" aria-label="menu">
+                    <IconButton edge="start" className={classes.logo} color="primary" aria-label="menu">
                         <img src={logo} alt="afluence logo"/>
                     </IconButton>
                     <Typography variant="h6" className={classes.title} style={{fontFamily: "'Montserrat', sans-serif"}}>{"Annotator" }</Typography>
                     <img src={bell} alt="bell icon" style={{width: '16px'}} />
-                    <IconButton onClick={handleMenuClick} color="inherit">
+                    <IconButton onClick={handleMenuClick} color="primary">
                         <MoreVert />
                     </IconButton>                    
                     <Menu open={Boolean(anchor)} 
