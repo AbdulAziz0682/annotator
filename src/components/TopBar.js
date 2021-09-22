@@ -9,6 +9,7 @@ import { AppBar, Toolbar, Typography, IconButton, Menu, MenuItem } from "@materi
 import { MoreVert } from "@material-ui/icons";
 
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { logout } from "../redux/actions/accountActions";
 import { setCurrentTab } from "../redux/actions/graderActions";
@@ -43,6 +44,8 @@ const useStyles = makeStyles((theme) => ({
 export default function TopBar(props){
     const classes = useStyles();
     let dispatch = useDispatch();
+    const {accountType} = useSelector(state => state.account.user);
+    console.log(accountType);
     let [anchor, setAnchor] = useState(null);
     function handleMenuClick(event){
         setAnchor(event.currentTarget);
@@ -62,7 +65,7 @@ export default function TopBar(props){
                         <img src={logo} alt="afluence logo"/>
                     </IconButton>
                     <Typography variant="h6" color="primary" className={classes.title} style={{fontFamily: "'Montserrat', sans-serif"}}>{"Annotator" }</Typography>
-                    <img src={bell} alt="bell icon" style={{width: '16px'}} />
+                    {accountType !== 'planner' && <img src={bell} alt="bell icon" style={{width: '16px'}} />}
                     <IconButton onClick={handleMenuClick} color="primary">
                         <MoreVert />
                     </IconButton>                    
@@ -82,7 +85,7 @@ export default function TopBar(props){
                         classes={{paper: classes.paper}}
                     >
                         <MenuItem key="2" onClick={handleAccountClick}><span style={{fontFamily: "'Montserrat', sans-serif"}} className="pr-24 pb-2 border-b border-gray-300">Account</span></MenuItem>
-                        <MenuItem key="3" component={Link} to="/login" onClick={(e)=>{dispatch(logout()); handleMenuClose(e)}}><span style={{fontFamily: "'Montserrat', sans-serif"}} className="pr-24">Logout</span></MenuItem>
+                        <MenuItem key="3" component={Link} to={`${accountType === 'planner' ? '/plannerLogin' : '/login'}`} onClick={(e)=>{dispatch(logout()); handleMenuClose(e)}}><span style={{fontFamily: "'Montserrat', sans-serif"}} className="pr-24">Logout</span></MenuItem>
                     </Menu>
                 </Toolbar>
             </AppBar>

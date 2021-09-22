@@ -11,6 +11,7 @@ import Register from './Regiser';
 import Grader from '../components/Grader/index';
 import Login from './Login';
 import PlannerLogin from '../components/Login/PlannerLogin';
+import Planner from '../components/Planner';
 import Test from './Test';
 
 export default function Routes({children}){
@@ -30,6 +31,7 @@ export default function Routes({children}){
                         <Route exact path="/home"><Home /></Route>
                         <Route exact path="/"><Login /></Route>
                         <Route exact path="/plannerLogin"><PlannerLogin /></Route>
+                        <Route exact path="/planner"><Planner /></Route>
                     </Switch>
                 </Grid>
             </Grid>

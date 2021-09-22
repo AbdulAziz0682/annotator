@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
-import { Hidden } from '@material-ui/core';
 
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -14,7 +13,6 @@ import { login } from '../../redux/actions/accountActions';
 
 import dummyUser from './dummyUser';
 import DesktopLogin from './DesktopLogin';
-import MobileLogin from './MobileLogin';
 
 export default function PlannerLogin(props){
     let loggedIn = useSelector((state)=>state.account.loggedIn);
@@ -39,6 +37,7 @@ export default function PlannerLogin(props){
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
+            dummyUser.accountType = 'planner';
             dispatch(login(dummyUser));
             history.push('/planner');
             console.log(JSON.stringify(values, null, 2));
