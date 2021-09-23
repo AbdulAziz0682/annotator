@@ -7,6 +7,7 @@ import MobileAccount from './Account/MobileAccount';
 import DesktopAccount from './Account/DesktopAccount';
 import Jobs from './Jobs';
 import Job from './Job';
+import GraderFromJob from './GraderFromJob';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -38,6 +39,9 @@ export default function Content(props){
             }
             {
                 currentTab.name === 'job' && <Job job={currentTab.data} />
+            }
+            {
+                currentTab.name === 'graderFromJob' && <GraderFromJob job={currentTab.data} />
             }
             {
                 currentTab.name === 'graders' && <>Graders</>

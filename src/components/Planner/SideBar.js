@@ -80,7 +80,7 @@ export default function SideBar() {
 					</div>
 				</ListItem>
 				<ListItem button key="graders" onClick={()=>dispatch(setCurrentTab({name: 'graders', data: null}))}>
-					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab.name === 'graders' ? activeColor : ''}} >
+					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: (currentTab.name === 'graders' || currentTab.name === 'graderFromJob') ? activeColor : ''}} >
 						<ListItemIcon><img src={gradersIcon} alt="Graders" className="w-5 h-6" /></ListItemIcon>
 						<ListItemText primary="Graders" />
 					</div>

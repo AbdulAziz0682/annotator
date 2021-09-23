@@ -10,9 +10,39 @@ const initialState = {
         {id: 'Job ID 3', developer: 'dev_03@gmail.com', project: 'new vdlg', percentComplete: 60, accuracy: '0.B', date: new Date(), grader: 'email_address_3@gmail.com'},
     ],
     graders: [
-        {email: 'email_addres_1@gmail.com', jobId: 'Job ID 1', heard: true, transcript: 'a boy', matched: true, aScore: '0.B', today: 12, month: 'B'},
-        {email: 'email_addres_2@gmail.com', jobId: 'Job ID 2', heard: true, transcript: 'a boy', matched: true, aScore: '0.B', today: 12, month: 'B'},
-        {email: 'email_addres_3@gmail.com', jobId: 'Job ID 3', heard: true, transcript: 'a boy', matched: true, aScore: '0.B', today: 12, month: 'B'}
+        {
+            email: 'email_address_1@gmail.com', aScore: '0.B', today: 12, month: 'B',
+            usingOtherVoices: [
+                {jobId: 'Job ID 1', heard: true, transcript: 'a boy', matched: true, aScore: '0.B'}
+            ],
+            usingOwnVoices: [
+                {jobId: 'jkilkskjf', heard: true, said: true, transcript: 'jump up', matched: true, aScore: '0.B'},
+                {jobId: 'aeslkskjf', heard: true, said: true, transcript: 'jump up', matched: true, aScore: '0.B'},
+                {jobId: 'uiolkskjf', heard: true, said: true, transcript: 'ope o', matched: true, aScore: '0.B'}
+            ]
+        },
+        {
+            email: 'email_address_2@gmail.com', aScore: '0.B', today: 12, month: 'B',
+            usingOtherVoices: [
+                {jobId: 'Job ID 1', heard: true, transcript: 'a boy', matched: true, aScore: '0.B'}
+            ],
+            usingOwnVoices: [
+                {jobId: 'jkilkskjf', heard: true, said: true, transcript: 'jump up', matched: true, aScore: '0.B'},
+                {jobId: 'aeslkskjf', heard: true, said: true, transcript: 'jump up', matched: true, aScore: '0.B'},
+                {jobId: 'uiolkskjf', heard: true, said: true, transcript: 'ope o', matched: true, aScore: '0.B'}
+            ]
+        },
+        {
+            email: 'email_address_3@gmail.com', aScore: '0.B', today: 12, month: 'B',
+            usingOtherVoices: [
+                {jobId: 'Job ID 1', heard: true, transcript: 'a boy', matched: true, aScore: '0.B'}
+            ],
+            usingOwnVoices: [
+                {jobId: 'jkilkskjf', heard: true, said: true, transcript: 'jump up', matched: true, aScore: '0.B'},
+                {jobId: 'aeslkskjf', heard: true, said: true, transcript: 'jump up', matched: true, aScore: '0.B'},
+                {jobId: 'uiolkskjf', heard: true, said: true, transcript: 'ope o', matched: true, aScore: '0.B'}
+            ]
+        },
     ]
 }
 
