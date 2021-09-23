@@ -3,7 +3,12 @@ import { SET_CURRENT_TAB, TOGGLE_DRAWER } from "../actions/plannerTypes";
 
 const initialState = {
     drawerOpen: false,
-    currentTab: 'otherVoices'
+    currentTab: 'jobs',
+    jobs: [
+        {id: 'Job ID 1', developer: 'dev_01@gmail.com', project: 'new vcmd', percentComplete: 20, accuracy: '0.B', date: new Date()},
+        {id: 'Job ID 2', developer: 'dev_02@gmail.com', project: 'new vdlg', percentComplete: 0, accuracy: '0.B', date: new Date()},
+        {id: 'Job ID 3', developer: 'dev_03@gmail.com', project: 'new vdlg', percentComplete: 60, accuracy: '0.B', date: new Date()},
+    ]
 }
 
 function toggleDrawer(state){

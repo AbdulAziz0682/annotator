@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 import MobileAccount from './Account/MobileAccount';
 import DesktopAccount from './Account/DesktopAccount';
+import Jobs from './Jobs';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -32,7 +33,7 @@ export default function Content(props){
     return (
         <div className={classes.root}>
             {
-                currentTab === 'jobs' && <>Jobs</>
+                currentTab === 'jobs' && <Jobs />
             }
             {
                 currentTab === 'graders' && <>Graders</>
