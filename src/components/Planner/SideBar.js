@@ -52,9 +52,9 @@ const useStyles = makeStyles((theme) => ({
 
 export default function SideBar() {
 	const classes = useStyles();
-	const open = useSelector((state)=>state.grader.drawerOpen);
+	const open = useSelector((state)=>state.planner.drawerOpen);
 	const dispatch = useDispatch();
-	const {currentTab} = useSelector((state)=>state.grader);
+	const {currentTab} = useSelector((state)=>state.planner);
 	return (
 		<>
 		<CssBaseline />
@@ -73,20 +73,20 @@ export default function SideBar() {
 			}}
 		>
 			<List className={classes.content}>
-				<ListItem button key="jobs" onClick={()=>dispatch(setCurrentTab('jobs'))} >
-					<div className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'jobs' ? activeColor : ''}} >
+				<ListItem button key="jobs" onClick={()=>dispatch(setCurrentTab({name: 'jobs', data: null}))} >
+					<div className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: (currentTab.name === 'jobs' || currentTab.name === 'job') ? activeColor : ''}} >
 						<ListItemIcon><img src={jobsIcon} alt="jobs" className="w-6" /></ListItemIcon>
 						<ListItemText primary="Jobs" />
 					</div>
 				</ListItem>
-				<ListItem button key="graders" onClick={()=>dispatch(setCurrentTab('graders'))}>
-					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'graders' ? activeColor : ''}} >
+				<ListItem button key="graders" onClick={()=>dispatch(setCurrentTab({name: 'graders', data: null}))}>
+					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab.name === 'graders' ? activeColor : ''}} >
 						<ListItemIcon><img src={gradersIcon} alt="Graders" className="w-5 h-6" /></ListItemIcon>
 						<ListItemText primary="Graders" />
 					</div>
 				</ListItem>
-				<ListItem button key="addPlanners" onClick={()=>dispatch(setCurrentTab('addPlanners'))}>
-					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab === 'addPlanners' ? activeColor : ''}} >
+				<ListItem button key="addPlanners" onClick={()=>dispatch(setCurrentTab({name: 'addPlanners', data: null}))}>
+					<div  className={`py-1 px-2 rounded flex overflow-hidden ${!open ? 'w-10' : 'w-full'}`} style={{backgroundColor: currentTab.name === 'addPlanners' ? activeColor : ''}} >
 						<ListItemIcon><img src={addPlannersIcon} alt="add Planners" className="w-6" /></ListItemIcon>
 						<ListItemText primary="Add Planners" />
 					</div>

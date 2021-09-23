@@ -6,11 +6,11 @@ export const toggleDrawer = () => {
     }
 }
 
-export const setCurrentTab = (name) => {
+export const setCurrentTab = (tab) => {
     return {
         type: SET_CURRENT_TAB,
         payload: {
-            name
+            tab
         }
     }
 }

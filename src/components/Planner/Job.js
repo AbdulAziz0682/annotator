@@ -1,18 +1,22 @@
-import { Grid, InputBase, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@material-ui/core";
-import { Search } from "@material-ui/icons";
+import { Button, Grid, InputBase, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@material-ui/core";
+
+import { Search, ArrowBack } from "@material-ui/icons";
 
 import infoIcon from '../../assets/info.svg';
 
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentTab } from "../../redux/actions/plannerActions";
 
-export default function Jobs(){
+export default function Job({job}){
     const {jobs} = useSelector(state => state.planner);
     const dispatch = useDispatch();
     return (
         <Grid container direction="column" className="p-2 md:p-6 self-start">
             <Grid item>
-                <Typography color="primary" className="font-bold text-2xl">Jobs</Typography>
+                <Typography color="primary" className="font-bold text-2xl">Job id: <span className="font-normal">{job.id}</span></Typography>
+            </Grid>
+            <Grid item className="flex justify-end">
+                <Button variant="contained" color="primary" size="small" startIcon={<ArrowBack />} onClick={()=>dispatch(setCurrentTab({name: 'jobs', data: null}))}>Back</Button>
             </Grid>
             <Grid item container className="mt-12 md:gap-60 gap-2">
                 <Grid item className="flex-grow flex gap-2 items-center">
@@ -51,9 +55,7 @@ export default function Jobs(){
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell className="border-black">Job ID</TableCell>
-                            <TableCell className="border-black">Developer</TableCell>
-                            <TableCell className="border-black">Project</TableCell>
+                            <TableCell className="border-black">Grader</TableCell>
                             <TableCell className="border-black">
                                 <span className="flex">
                                     Complete
@@ -66,19 +68,15 @@ export default function Jobs(){
                                     <img src={infoIcon} alt="info" className="w-4" />
                                 </span>
                             </TableCell>
-                            <TableCell className="border-black">Date</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                     {
                         jobs.map((job, index) => <>
-                            <TableRow hover key={index} onClick={()=>dispatch(setCurrentTab({name: 'job', data: job}))}>
-                                <TableCell>{job.id}</TableCell>
-                                <TableCell>{job.developer}</TableCell>
-                                <TableCell>{job.project}</TableCell>
+                            <TableRow hover key={index} onClick={()=>{}}>
+                                <TableCell>{job.grader}</TableCell>
                                 <TableCell>{job.percentComplete+"%"}</TableCell>
                                 <TableCell>{job.accuracy}</TableCell>
-                                <TableCell>{job.date.toDateString()}</TableCell>
                             </TableRow>
                         </>)
                     }
