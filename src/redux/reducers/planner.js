@@ -43,6 +43,11 @@ const initialState = {
                 {jobId: 'uiolkskjf', heard: true, said: true, transcript: 'ope o', matched: true, aScore: '0.B'}
             ]
         },
+    ],
+    planners: [
+        {email: 'email_address_1@gmail.com', phone: 3322333345},
+        {email: 'email_address_2@gmail.com', phone: 3322333345},
+        {email: 'email_address_3@gmail.com', phone: 3322333345}
     ]
 }
 
