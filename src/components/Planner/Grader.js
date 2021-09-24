@@ -9,9 +9,7 @@ import infoIcon from '../../assets/info.svg';
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentTab } from "../../redux/actions/plannerActions";
 
-export default function Grader({job}){
-    const {graders} = useSelector(state => state.planner);
-    const grader = graders.find(grader => grader.email === job.grader);
+export default function GraderFromJob({grader}){
     const dispatch = useDispatch();
     let [voiceTypes, setVoiceTypes] = useState('usingOtherVoices');
     return (
@@ -20,7 +18,7 @@ export default function Grader({job}){
                 <Typography color="primary" className="font-bold text-2xl">Email: <span className="font-normal">{grader.email}</span></Typography>
             </Grid>
             <Grid item className="flex justify-end">
-                <Button variant="contained" color="primary" size="small" startIcon={<ArrowBack />} onClick={()=>dispatch(setCurrentTab({name: 'job', data: job}))}>Back</Button>
+                <Button variant="contained" color="primary" size="small" startIcon={<ArrowBack />} onClick={()=>dispatch(setCurrentTab({name: 'graders', data: null}))}>Back</Button>
             </Grid>
             <Grid item className="flex justify-end mt-12">
                 <select value={voiceTypes} onChange={(e)=>setVoiceTypes(e.target.value)} className="p-2 bg-gray-100 rounded-lg">
@@ -31,7 +29,7 @@ export default function Grader({job}){
             <Grid item container className="mt-12 md:gap-60 gap-2">
                 <Grid item className="flex-grow flex gap-2 items-center">
                     <div className="flex-grow flex bg-gray-100 px-2 rounded-lg gap-1 divide-x items-center">
-                        <InputBase className="flex-grow w-20" placeholder="Type" />
+                        <InputBase className="flex-grow w-20 px-2" placeholder="Type" />
                         <span className="rounded-r-lg pl-2">
                             <Search />
                         </span>
@@ -44,7 +42,7 @@ export default function Grader({job}){
                             <option value="greaterThan">Greater than</option>
                             <option value="lessThan">Less Than</option>
                         </select>
-                        <InputBase className="flex-grow w-20 px-2" placeholder="Type" />
+                        <InputBase className="flex-grow w-20" placeholder="Type" />
                         <span className="bg-gray-100 rounded-r-lg">
                             a-score
                         </span>

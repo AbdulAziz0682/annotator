@@ -8,6 +8,8 @@ import DesktopAccount from './Account/DesktopAccount';
 import Jobs from './Jobs';
 import Job from './Job';
 import GraderFromJob from './GraderFromJob';
+import Graders from './Graders';
+import Grader from './Grader';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -44,7 +46,10 @@ export default function Content(props){
                 currentTab.name === 'graderFromJob' && <GraderFromJob job={currentTab.data} />
             }
             {
-                currentTab.name === 'graders' && <>Graders</>
+                currentTab.name === 'graders' && <Graders />
+            }
+            {
+                currentTab.name === 'grader' && <Grader grader={currentTab.data} />
             }
             {
                 currentTab.name === 'addPlanners' && <>Add Planners</>

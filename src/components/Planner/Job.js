@@ -39,7 +39,7 @@ export default function Job({job}){
                             <option value="greaterThan">Greater than</option>
                             <option value="lessThan">Less Than</option>
                         </select>
-                        <InputBase className="flex-grow w-20" placeholder="Type" />
+                        <InputBase className="flex-grow w-20 px-2" placeholder="Type" />
                         <select className="bg-gray-100 rounded-r-lg">
                             <option value="complete">Complete</option>
                             <option value="remaining">Remaining</option>
