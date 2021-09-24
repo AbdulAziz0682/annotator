@@ -6,7 +6,7 @@ import { Search, ArrowBack, PlayArrow } from "@material-ui/icons";
 
 import infoIcon from '../../assets/info.svg';
 
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setCurrentTab } from "../../redux/actions/plannerActions";
 
 export default function GraderFromJob({grader}){
