@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
     root: {
         padding: theme.spacing(1),
         paddingTop: theme.mixins.toolbar.minHeight/2-15,
-        height: "calc(100vh - 57px)",
+        maxHeight: "calc(100vh - 57px)",
+        overflow: 'auto',
         display: 'flex',
         [theme.breakpoints.down('sm')]:{
             zIndex: theme.zIndex.drawer - 300,

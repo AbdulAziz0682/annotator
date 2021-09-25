@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import { Button, Grid, Table, TableBody, TableCell, TableHead, TableRow, Typography } from "@material-ui/core";
+import { Button, Grid, Table, TableBody, TableCell, TableHead, TableRow, TableContainer, Typography, Paper } from "@material-ui/core";
 
 import { Add } from "@material-ui/icons";
 
@@ -31,30 +31,32 @@ export default function AddPlanners(){
                 <NewPlannerDialog open={open} handleClose={handleClose} />
             </Grid>
             <Grid item className="mt-4">
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell className="border-black">Email</TableCell>
-                            <TableCell className="border-black">Phone number</TableCell>
-                            <TableCell className="border-black">Action</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                    {
-                        planners.map((planner, index) => <>
-                            <TableRow hover key={index}>
-                                <TableCell>{planner.email}</TableCell>
-                                <TableCell>{planner.phone}</TableCell>
-                                <TableCell className="flex gap-6">
-                                    <img src={deleteIcon} alt="delete planner" /> 
-                                    <img onClick={()=>setEditPlannerOpen(true)} src={editIcon} alt="edit planner" />
-                                    <EditPlanner open={editPlannerOpen} handleClose={()=>setEditPlannerOpen(false)} planner={planner} />
-                                </TableCell>
+                <TableContainer component={Paper} className="w-64 md:w-auto">
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell className="border-black">Email</TableCell>
+                                <TableCell className="border-black">Phone number</TableCell>
+                                <TableCell className="border-black">Action</TableCell>
                             </TableRow>
-                        </>)
-                    }
-                    </TableBody>
-                </Table>
+                        </TableHead>
+                        <TableBody>
+                        {
+                            planners.map((planner, index) => <>
+                                <TableRow hover key={index}>
+                                    <TableCell>{planner.email}</TableCell>
+                                    <TableCell>{planner.phone}</TableCell>
+                                    <TableCell className="flex gap-6">
+                                        <img src={deleteIcon} alt="delete planner" /> 
+                                        <img onClick={()=>setEditPlannerOpen(true)} src={editIcon} alt="edit planner" />
+                                        <EditPlanner open={editPlannerOpen} handleClose={()=>setEditPlannerOpen(false)} planner={planner} />
+                                    </TableCell>
+                                </TableRow>
+                            </>)
+                        }
+                        </TableBody>
+                    </Table>
+                </TableContainer>
             </Grid>
         </Grid>
     )
