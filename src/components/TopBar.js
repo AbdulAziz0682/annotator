@@ -45,9 +45,7 @@ export default function TopBar(props){
     const classes = useStyles();
     let dispatch = useDispatch();
     const {accountType} = useSelector(state => state.account.user);
-    console.log(accountType);
     let [anchor, setAnchor] = useState(null);
-    let [showNotif, setShowNotif] = useState(false);
     let [notifAnchor, setNotifAnchor] = useState(null);
     function handleNotifClick(e){
         setNotifAnchor(e.currentTarget);
