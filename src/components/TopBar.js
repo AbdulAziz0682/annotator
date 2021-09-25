@@ -47,6 +47,14 @@ export default function TopBar(props){
     const {accountType} = useSelector(state => state.account.user);
     console.log(accountType);
     let [anchor, setAnchor] = useState(null);
+    let [showNotif, setShowNotif] = useState(false);
+    let [notifAnchor, setNotifAnchor] = useState(null);
+    function handleNotifClick(e){
+        setNotifAnchor(e.currentTarget);
+    }
+    function handleNotifClose(e){
+        setNotifAnchor(null);
+    }
     function handleMenuClick(event){
         setAnchor(event.currentTarget);
     }
@@ -65,7 +73,30 @@ export default function TopBar(props){
                         <img src={logo} alt="afluence logo"/>
                     </IconButton>
                     <Typography variant="h6" color="primary" className={classes.title} style={{fontFamily: "'Montserrat', sans-serif"}}>{"Annotator" }</Typography>
-                    {accountType !== 'planner' && <img src={bell} alt="bell icon" style={{width: '16px'}} />}
+                    {accountType !== 'planner' && <IconButton onClick={handleNotifClick}><img src={bell} alt="bell icon" style={{width: '16px'}} /></IconButton>}             
+                    <Menu open={Boolean(notifAnchor)} 
+                        elevation={0}
+                        anchorEl={notifAnchor}
+                        getContentAnchorEl={null}
+                        anchorOrigin={{
+                            vertical: 'bottom',
+                            horizontal: 'right',
+                        }}
+                        transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'right',
+                        }}
+                        onClose={handleNotifClose}
+                        classes={{paper: classes.paper}}
+                    >
+                        <MenuItem className="pt-8 h-96 flex items-start hover:bg-white">
+                            <span className="bg-green-300 w-60 rounded-lg p-2">
+                                Hi there a user has launched <br />
+                                a new grader, please
+                                review <br />
+                            </span>
+                        </MenuItem>
+                    </Menu>
                     <IconButton onClick={handleMenuClick} color="primary">
                         <MoreVert />
                     </IconButton>                    
