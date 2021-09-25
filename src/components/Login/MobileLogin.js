@@ -12,7 +12,7 @@ import key from '../../assets/key.svg';
 
 const inputIconSize = 16;
 
-export default function MobileLogin({formik}){
+export default function MobileLogin({formik, isPlannerLogin}){
     return (
         <Grid container alignItems="center" direction="column">
             <Grid item className="w-80 flex items-center p-6">
@@ -84,7 +84,7 @@ export default function MobileLogin({formik}){
             </Grid>
             <Grid item xs={7} className="flex flex-col items-center">
                 <Button variant="contained" color="primary" type="submit" fullWidth className="px-2 text-2xl">Log in</Button>
-                <div className="w-80 flex justify-center items-center text-xs mt-2">
+                <div className={`w-80 flex justify-center items-center text-xs mt-2 ${isPlannerLogin ? 'hidden' : 'block'}`}>
                     <span>Don't have an account?</span>
                     <Link to="/register" className="font-bold uppercase mx-1">Sign up here</Link>
                 </div>

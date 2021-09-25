@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Hidden } from '@material-ui/core';
 
 import { useFormik } from 'formik';
 import * as yup from 'yup';
@@ -13,6 +13,7 @@ import { login } from '../../redux/actions/accountActions';
 
 import dummyUser from './dummyUser';
 import DesktopLogin from './DesktopLogin';
+import MobileLogin from './MobileLogin';
 
 export default function PlannerLogin(props){
     let loggedIn = useSelector((state)=>state.account.loggedIn);
@@ -50,7 +51,12 @@ export default function PlannerLogin(props){
     return (
         <Grid container item>
             <form onSubmit={formik.handleSubmit} className="w-full flex items-start justify-start lg:items-center lg:justify-center">
-                <DesktopLogin formik={formik} isPlannerLogin={true} />
+                <Hidden smDown>
+                    <DesktopLogin formik={formik} isPlannerLogin={true} />
+                </Hidden>
+                <Hidden mdUp>
+                    <MobileLogin formik={formik} isPlannerLogin={true} />
+                </Hidden>
             </form>
         </Grid>
     )
