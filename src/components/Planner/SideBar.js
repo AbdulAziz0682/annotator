@@ -55,6 +55,7 @@ export default function SideBar() {
 	const open = useSelector((state)=>state.planner.drawerOpen);
 	const dispatch = useDispatch();
 	const {currentTab} = useSelector((state)=>state.planner);
+	console.log({currentTab});
 	return (
 		<>
 		<CssBaseline />

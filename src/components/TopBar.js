@@ -12,7 +12,7 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 
 import { logout } from "../redux/actions/accountActions";
-import { setCurrentTab } from "../redux/actions/graderActions";
+import { setCurrentTab } from "../redux/actions/plannerActions";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -60,8 +60,8 @@ export default function TopBar(props){
         setAnchor(null);
     }
     function handleAccountClick(){
-        dispatch(setCurrentTab('account'));
         handleMenuClose();
+        return dispatch(setCurrentTab({name: 'account', data: null}));
     }
     return (
         <div className={classes.root}>
